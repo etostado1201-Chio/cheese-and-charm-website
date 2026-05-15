@@ -2,15 +2,15 @@ import Image from "next/image";
 import { COPY, GALLERY, t, type Lang } from "../lib/content";
 
 const SPANS = [
-  "col-span-5 row-span-3",
-  "col-span-4 row-span-2",
-  "col-span-3 row-span-3",
-  "col-span-4 row-span-2",
-  "col-span-3 row-span-2",
-  "col-span-5 row-span-3",
-  "col-span-4 row-span-2",
-  "col-span-4 row-span-2",
-  "col-span-4 row-span-2",
+  "md:col-span-5 md:row-span-3",
+  "md:col-span-4 md:row-span-2",
+  "md:col-span-3 md:row-span-3",
+  "md:col-span-4 md:row-span-2",
+  "md:col-span-3 md:row-span-2",
+  "md:col-span-5 md:row-span-3",
+  "md:col-span-4 md:row-span-2",
+  "md:col-span-4 md:row-span-2",
+  "md:col-span-4 md:row-span-2",
 ];
 
 export function Gallery({ lang }: { lang: Lang }) {
@@ -25,9 +25,9 @@ export function Gallery({ lang }: { lang: Lang }) {
             {t(lang, COPY.gallery_h)}
           </h2>
         </div>
-        <div className="mt-16 grid grid-cols-12 gap-4" style={{ gridAutoRows: "140px" }}>
+        <div className="mt-16 grid grid-cols-2 gap-3 md:grid-cols-12 md:gap-4 md:auto-rows-[140px]">
           {GALLERY.map((src, i) => (
-            <div key={i} className={`relative overflow-hidden rounded-[2px] ${SPANS[i] || "col-span-4 row-span-2"} group`}>
+            <div key={i} className={`relative aspect-square overflow-hidden rounded-[2px] md:aspect-auto ${SPANS[i] || "md:col-span-4 md:row-span-2"} group`}>
               <Image src={src} alt="" fill className="object-cover transition-transform duration-[600ms] ease-out group-hover:scale-[1.05]" sizes="(max-width: 768px) 50vw, 33vw" />
             </div>
           ))}

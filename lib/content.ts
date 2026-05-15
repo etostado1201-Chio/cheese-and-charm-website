@@ -94,7 +94,7 @@ export const GALLERY: string[] = [
   "/assets/grazing-table-3.png",
   "/assets/board-heart.jpg",
   "/assets/large-board-2.jpg",
-  "/assets/board-tools.jpg",
+  "/assets/large-board-1.jpg",
   "/assets/grazing-table-4.png",
   "/assets/board-valentine.jpg",
 ];

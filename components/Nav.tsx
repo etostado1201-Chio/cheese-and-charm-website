@@ -26,14 +26,17 @@ export function Nav({ lang }: { lang: Lang }) {
   return (
     <nav className="sticky top-0 z-50 border-b border-line bg-white/[0.88] backdrop-blur-[14px]">
       <div className="mx-auto flex max-w-[1320px] items-center justify-between px-8 py-[14px]">
-        <Link href={`/${lang}`} className="flex items-center">
+     <Link href={`/${lang}`} className="flex items-center gap-3">
           <Image
             src="/assets/logo.jpg"
-            alt="Cheese and Charm"
-            width={44}
-            height={44}
-            className="rounded-full mix-blend-multiply"
+            alt="Cheese and Charm Charcuterie"
+            width={500}
+            height={500}
+            className="h-11 w-11 rounded-full object-cover"
           />
+          <span className="font-script text-[24px] leading-none text-ink hidden sm:block">
+            Cheese and Charm
+          </span>
         </Link>
 
         <div className="hidden gap-8 md:flex">
